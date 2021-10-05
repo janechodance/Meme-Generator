@@ -14,36 +14,34 @@ function loadMemesName(memes) {
     li.addEventListener('click' , () => displayMemes(li.id))
   })
 };
-// function fetchMeme(id){
-//   fetch(id)
-//   .then(resp => resp.json())
-//   .then(json => displayMemes(json))
-  
-// // }
+
 function displayMemes(url){
-    const memeImage = document.createElement('img');
+  memeContainer.replaceChildren()
+  const memeImage = document.createElement('img');
     memeImage.src = url;
     memeContainer.appendChild(memeImage);
+    memeImage.style = 'width: 600px; height; 600px'
 };
 
 
-const searchForm = document.querySelector('#meme-form').addEventListener('submit', searchMemes)
+const searchForm = document.querySelector('#meme-form')
+searchForm.addEventListener('submit', searchMemes)
+
 function searchMemes(e) {
   e.preventDefault();
-  const query = document.querySelector('#meme-input').value
+  
   fetch('https://api.imgflip.com/get_memes')
   .then(resp => resp.json())
-  .then(json   => {
-    json.data.memes.forEach(meme => console.log(meme.name))
-  }
-    )
+  .then(json => {
+    let query = document.querySelector('#meme-input').value;
+    searchForm.reset()
+    const match = json.data.memes.filter(function(memes){
+        return memes.name === query
+      })
+      displayMemes(match[0].url)
+      })
+  memeContainer.replaceChildren()
 
 
-
-  // searchForm.reset()
-  // memeContainer.replaceChildren()
 }
-
-
-
-init()
+    init();
