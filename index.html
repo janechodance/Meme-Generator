@@ -4,25 +4,27 @@
   <meta charset="UTF-8">
   <title>Meme Generator</title>
   <link rel="stylesheet" href="./style.css">
-  <script src="./src/index.js"></script>
+  <script defer src="index.js"></script>
+ 
 
 </head>
 <body>
-  <div id="main-content">
-    <h1>Meme</h1>
+  <div id ="meme-list-holder">
+    <h2>Memes</h2>
+    <form class="text-center" id="meme-form">
+			<input type="text" id="meme-input" placeholder="search memes..." />
 
-    
-    <!-- <button id="notify">Click Me!</button> -->
-     
-    <form id="" action="#" method="POST">
+			<input type="submit" value="Submit" />
+        </form>
+    <ul id="meme-list">
       
-    </form>
-
-    <div id="list">
-      <h2>My Todos</h2>
-      <ul id="tasks">
+      </ul>
+  </div>
+ <div id="meme">
+      <ul id="meme">
       </ul>
     </div>
-  </div>
+    
+       
 </body>
 </html>
