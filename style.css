@@ -12,8 +12,13 @@ body {
 
 button {
   font-size: 15px;
+  border: 1px solid rgb(128, 11, 151);
 }
-
+h2 {
+  font-size: 38px;
+  font-family: Comic Sans MS;
+  color:rgb(128, 11, 151);
+}
 
 
 #list {
@@ -27,12 +32,137 @@ button {
 
 li {
   width: 250px;
-  margin: 5px
+  margin: 5px;
+  height: 85px
 }
 
 img {
   position: absolute;
   float: right;
-  top: 300px;
-  right: 30px
+  top: 200px;
+  right: 130px
 }
+
+a {
+  text-decoration: none;
+}
+#meme-input {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 40%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#meme-list {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#meme-list li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  font-family: Comic Sans MS;
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#meme-list li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+#like-btn {
+  position: relative;
+  left:260px;
+  bottom: 53px
+}
+
+#dislike-btn {
+  position: relative;
+  left: 260px;
+  bottom: 140px
+}
+
+#like-counter {
+  position: relative;
+  left: 300px;
+  bottom: 95px;
+  color: rgb(8, 39, 177)
+}
+
+#like-num {
+  position: relative;
+  left: 57px;
+  bottom: 31px;
+}
+
+#dislike-counter {
+  position: relative;
+  left: 300px;
+  bottom: 183px;
+  color: rgba(182, 9, 9, 0.699)
+}
+#dislike-num {
+  position: relative;
+  left: 57px;
+  bottom: 31px;
+}
+
+#random-meme {
+  position: absolute;
+  left:840px;
+  top: 105px;
+
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(128, 11, 151);
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: rgb(26, 105, 50);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+
+}
+
+#random-meme:disabled {
+  pointer-events: none;
+}
+
+#random-meme:hover {
+  color: #fff;
+  background-color: #0d7199;
+  box-shadow: rgba(12, 116, 212, 0.658) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#random-meme:active {
+  box-shadow: none;
+  transform: translateY(0);
+} 
+
+
