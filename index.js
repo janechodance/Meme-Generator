@@ -103,12 +103,6 @@ function searchMemes(e) {
 
 
 }
-// const randomMemebtn = document.createElement('button')
-// const memeListHolder = document.querySelector('#meme-list-holder')
-// randomMemebtn.innerHTML = "Generate Random Meme!"
-// memeListHolder.appendChild(randomMemebtn)
-// randomMemebtn.addEventListener('click', randomMeme)
-// generate random meme
 function randomMeme(){
 let random = Math.floor(Math.random() * 99);
 fetch('https://api.imgflip.com/get_memes')
